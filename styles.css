@@ -1,0 +1,105 @@
+/* styles.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a1a1d, #121212);
+    color: #e6e6e6;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #00d9ff;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px #00d9ff, 0 0 30px #00d9ff;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #e6e6e6;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.left-section, .right-section {
+    flex: 1;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.left-section:hover, .right-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.image-container {
+    background: radial-gradient(circle, #00d9ff, transparent);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.left-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.crypto {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.crypto h3 {
+    color: #00ffab;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px #00ffab;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #00d9ff, #00ffab);
+    color: #121212;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #00ffab, #00d9ff);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        margin-bottom: 20px;
+    }
+}

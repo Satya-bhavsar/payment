@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Page</h1>
+        <p>Join us in shaping a better tomorrow. Your support matters!</p>
+
+        <div class="content">
+            <!-- UPI Donation Section -->
+            <div class="left-section">
+                <h2>Pay via UPI</h2>
+                <div class="image-container">
+                    <img src="https://i.ibb.co/HGL522C/upi-1732730958334.png" alt="UPI QR Code">
+                </div>
+                <p>Scan the QR code using your UPI app to donate instantly.</p>
+            </div>
+
+            <!-- Crypto Donation Section -->
+            <div class="right-section">
+                <h2>Pay with Cryptocurrency</h2>
+                <div class="crypto">
+                    <h3>Bitcoin</h3>
+                    <p>Address: <span id="btc-address">bc1q8xew33u3c5mjj3zza69upnc76nxf2w4jwgwzgy</span></p>
+                    <button onclick="copyAddress('btc-address')">Copy Address</button>
+                </div>
+                <div class="crypto">
+                    <h3>Ethereum</h3>
+                    <p>Address: <span id="eth-address">0x12747731Eb32EC7453f4F61a0439d612075Ff3A8</span></p>
+                    <button onclick="copyAddress('eth-address')">Copy Address</button>
+                </div>
+                <div class="crypto">
+                    <h3>Solana</h3>
+                    <p>Address: <span id="sol-address">CnnsL9NdF1X7tCeBAVVvqJJCgDZ9oqCp5n8FeYDTGgXZ</span></p>
+                    <button onclick="copyAddress('sol-address')">Copy Address</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyAddress(id) {
+            const address = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(address);
+            alert('Address copied: ' + address);
+        }
+    </script>
+</body>
+</html>
